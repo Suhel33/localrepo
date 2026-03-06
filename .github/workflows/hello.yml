@@ -1,13 +1,13 @@
 # This is workflow name
 name: Hello Workflow
 # Runs on an automatic trigger, whenever changes is pushed to branch [Deployment]
-# on:
-#   push:
-#     branches: [main]
+on:
+  push:
+    branches: [main]
 
 # Runs on an mannual trigger, whenever changes is pushed to branch [Deployment]
-on:
-  workflow_dispatch:
+# on:
+#   workflow_dispatch:
   
 # These are the jobs inside the workflow
 jobs:
