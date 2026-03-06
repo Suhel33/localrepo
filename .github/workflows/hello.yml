@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+    paths:
+      - '**.html'
+
 # Runs on an mannual trigger, whenever changes is pushed to branch [Deployment]
 # on:
 #   workflow_dispatch:
