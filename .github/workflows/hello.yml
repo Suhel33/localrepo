@@ -11,8 +11,9 @@ jobs:
     # This is github runner. Each jobs run on a runner (server-> ubuntu/windows/macos etc)
     runs-on: ubuntu-latest
     steps:
+      # Step 1
       - name: say hello to users
         run: echo "Hello Dosto"
-
+      # Step 2
       - name: say hello to username
         run: echo "Hello $USER"
