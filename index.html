@@ -4,16 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suhel Khan | Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 
 body{
 background:linear-gradient(135deg,#020617,#020617,#0f172a);
@@ -21,13 +18,7 @@ color:white;
 overflow-x:hidden;
 }
 
-section{
-padding:80px 10%;
-}
-
-h1,h2,h3{
-font-weight:600;
-}
+section{padding:80px 10%}
 
 .hero{
 height:100vh;
@@ -38,24 +29,30 @@ align-items:center;
 text-align:center;
 }
 
-.hero h1{
-font-size:60px;
+.profile-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
 margin-bottom:20px;
+border:3px solid rgba(255,255,255,0.3);
 }
 
-.hero p{
-color:#cbd5f5;
-max-width:600px;
-}
+.hero h1{font-size:60px;margin-bottom:15px}
+.hero p{color:#cbd5f5;max-width:650px}
 
 .icons{
-margin-top:30px;
+margin-top:35px;
 display:flex;
-gap:20px;
+gap:25px;
 }
 
 .icon{
-padding:12px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:50%;
 backdrop-filter:blur(10px);
 background:rgba(255,255,255,0.08);
@@ -63,9 +60,11 @@ border:1px solid rgba(255,255,255,0.2);
 transition:0.3s;
 }
 
+.icon img{width:28px;height:28px}
+
 .icon:hover{
 transform:scale(1.15);
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.18);
 }
 
 .glass{
@@ -77,9 +76,7 @@ border-radius:18px;
 transition:0.3s;
 }
 
-.glass:hover{
-transform:translateY(-8px);
-}
+.glass:hover{transform:translateY(-8px)}
 
 .grid{
 display:grid;
@@ -87,15 +84,24 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.skills div{
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.skill{
 text-align:center;
-padding:15px;
-border-radius:10px;
+padding:22px;
+border-radius:12px;
 background:rgba(255,255,255,0.08);
 transition:0.3s;
 }
 
-.skills div:hover{
+.skill i{font-size:40px;margin-bottom:12px}
+
+.skill:hover{
 transform:scale(1.1);
 background:rgba(255,255,255,0.15);
 }
@@ -112,58 +118,124 @@ text-decoration:none;
 transition:0.3s;
 }
 
-.contact-btn:hover{
-transform:scale(1.05);
-}
+.contact-btn:hover{transform:scale(1.05)}
 
-footer{
-text-align:center;
-padding:30px;
-color:#94a3b8;
-}
+footer{text-align:center;padding:30px;color:#94a3b8}
 
 </style>
 </head>
 
 <body>
 
+<!-- HERO SECTION -->
 <section class="hero">
+
+<!-- YOUR PHOTO (place inside photo folder) -->
+<img src="photo/profile.jpg" class="profile-img" alt="Suhel Khan">
+
 <h1>Suhel Khan</h1>
-<p>Aspiring Software Engineer specializing in Java development, backend systems and DevOps practices including CI/CD pipelines using GitHub Actions.</p>
+
+<p>
+Aspiring Software Engineer specializing in Java development, backend systems and DevOps practices including CI/CD pipelines using GitHub Actions.
+</p>
 
 <div class="icons">
-<a class="icon" href="https://github.com/Suhel33">GitHub</a>
-<a class="icon" href="https://www.linkedin.com/in/suhel-khan-90627025a/">LinkedIn</a>
-<a class="icon" href="mailto:suhelkhan4171@gmail.com">Email</a>
+
+<!-- GitHub Image with clickable link -->
+<a class="icon" href="https://github.com/Suhel33" target="_blank">
+<img src="photo/github-logo-icon.png" alt="GitHub">
+</a>
+
+<!-- LinkedIn Image with clickable link -->
+<a class="icon" href="https://www.linkedin.com/in/suhel-khan-90627025a/" target="_blank">
+<img src="photo/linkedIn.png" alt="LinkedIn">
+</a>
+
+<!-- Email Image with clickable link -->
+<a class="icon" href="mailto:suhelkhan4171@gmail.com">
+<img src="photo/email.png" alt="Email">
+</a>
+
 </div>
+
 </section>
 
+
+<!-- ABOUT -->
 <section>
 <h2>About Me</h2>
+
 <div class="glass">
 <p>
-Final year B.Tech Computer Science student at Teerthanker Mahaveer University. Skilled in Java, SQL, Linux, React and DevOps practices including CI/CD pipelines using GitHub Actions. Passionate about building secure and scalable software systems.
+Final year B.Tech Computer Science student at Teerthanker Mahaveer University. Skilled in Java, SQL, Linux, React and DevOps practices including CI/CD pipelines using GitHub Actions. Passionate about building scalable and secure software systems.
 </p>
 </div>
+
 </section>
 
+
+<!-- SKILLS -->
 <section>
 <h2>Technical Skills</h2>
-<div class="grid skills">
-<div>Java</div>
-<div>Spring Boot</div>
-<div>React</div>
-<div>Python</div>
-<div>SQL</div>
-<div>Linux</div>
-<div>DSA</div>
-<div>OOP</div>
-<div>Git</div>
-<div>CI/CD</div>
-<div>GitHub Actions</div>
+
+<div class="skills">
+
+<div class="skill">
+<i class="devicon-java-plain colored"></i>
+<p>Java</p>
 </div>
+
+<div class="skill">
+<i class="devicon-spring-plain colored"></i>
+<p>Spring Boot</p>
+</div>
+
+<div class="skill">
+<i class="devicon-react-original colored"></i>
+<p>React</p>
+</div>
+
+<div class="skill">
+<i class="devicon-python-plain colored"></i>
+<p>Python</p>
+</div>
+
+<div class="skill">
+<i class="devicon-mysql-plain colored"></i>
+<p>SQL</p>
+</div>
+
+<div class="skill">
+<i class="devicon-linux-plain colored"></i>
+<p>Linux</p>
+</div>
+
+<div class="skill">
+<i class="devicon-cplusplus-plain colored"></i>
+<p>C++ / DSA</p>
+</div>
+
+<div class="skill">
+<i class="devicon-git-plain colored"></i>
+<p>Git</p>
+</div>
+
+<div class="skill">
+<i class="devicon-github-original"></i>
+<p>GitHub</p>
+</div>
+
+<div class="skill">
+<i class="devicon-docker-plain colored"></i>
+<p>Docker</p>
+</div>
+
+</div>
+
 </section>
 
+
+<!-- PROJECTS -->
 <section>
 <h2>Projects</h2>
 
@@ -187,6 +259,8 @@ C++ based task management application supporting task creation, editing, deletio
 
 </section>
 
+
+<!-- EXPERIENCE -->
 <section>
 <h2>Internship Experience</h2>
 
@@ -210,13 +284,17 @@ Worked with Java, Spring Boot and React while improving backend development and 
 
 </section>
 
+
+<!-- CONTACT -->
 <section style="text-align:center">
+
 <h2>Let's Connect</h2>
 <p>Open to Software Engineering, Backend Development and DevOps opportunities.</p>
 
 <a class="contact-btn" href="mailto:suhelkhan4171@gmail.com">Contact Me</a>
 
 </section>
+
 
 <footer>
 © 2026 Suhel Khan
