@@ -3,22 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suhel Khan | Portfolio</title>
+<title>Suhel Khan | Software Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 
+html{scroll-behavior:smooth}
+
 body{
-background:linear-gradient(135deg,#020617,#020617,#0f172a);
+background:#020617;
 color:white;
 overflow-x:hidden;
 }
 
-section{padding:80px 10%}
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.1);
+display:flex;
+justify-content:space-between;
+padding:15px 10%;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+nav a:hover{color:#38bdf8}
+
+section{padding:100px 10%}
 
 .hero{
 height:100vh;
@@ -30,275 +63,268 @@ text-align:center;
 }
 
 .profile-img{
-width:160px;
-height:160px;
+width:170px;
+height:170px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:20px;
 border:3px solid rgba(255,255,255,0.3);
+margin-bottom:20px;
 }
 
-.hero h1{font-size:60px;margin-bottom:15px}
-.hero p{color:#cbd5f5;max-width:650px}
+.hero h1{font-size:60px;margin-bottom:10px}
+
+.typing{
+font-size:20px;
+color:#38bdf8;
+height:30px;
+}
 
 .icons{
-margin-top:35px;
 display:flex;
 gap:25px;
+margin-top:30px;
 }
 
 .icon{
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-backdrop-filter:blur(10px);
+width:60px;height:60px;
+display:flex;align-items:center;justify-content:center;
 background:rgba(255,255,255,0.08);
+border-radius:50%;
 border:1px solid rgba(255,255,255,0.2);
-transition:0.3s;
+backdrop-filter:blur(10px);
+transition:.3s;
 }
 
-.icon img{width:28px;height:28px}
+.icon img{width:28px}
 
-.icon:hover{
-transform:scale(1.15);
-background:rgba(255,255,255,0.18);
-}
+.icon:hover{transform:scale(1.15)}
 
 .glass{
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(14px);
 border:1px solid rgba(255,255,255,0.2);
-padding:30px;
-border-radius:18px;
-transition:0.3s;
+padding:30px;border-radius:18px;
 }
-
-.glass:hover{transform:translateY(-8px)}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;margin-top:30px;
 }
 
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:25px;
-margin-top:30px;
+gap:25px;margin-top:30px;
 }
 
 .skill{
 text-align:center;
 padding:22px;
-border-radius:12px;
 background:rgba(255,255,255,0.08);
-transition:0.3s;
+border-radius:12px;
+transition:.3s;
 }
 
-.skill i{font-size:40px;margin-bottom:12px}
+.skill i{font-size:40px;margin-bottom:10px}
 
-.skill:hover{
-transform:scale(1.1);
-background:rgba(255,255,255,0.15);
+.skill:hover{transform:scale(1.1)}
+
+.project-buttons{
+margin-top:15px;
+display:flex;gap:10px;
 }
 
-.contact-btn{
-display:inline-block;
-margin-top:30px;
-padding:12px 28px;
-border-radius:10px;
-background:white;
-color:black;
-font-weight:600;
+.project-buttons a{
 text-decoration:none;
-transition:0.3s;
+padding:6px 14px;
+border-radius:6px;
+background:#38bdf8;
+color:black;
+font-size:12px;
+font-weight:600;
 }
 
-.contact-btn:hover{transform:scale(1.05)}
+.resume-btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 28px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
 
-footer{text-align:center;padding:30px;color:#94a3b8}
+footer{text-align:center;padding:40px;color:#94a3b8}
 
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+<nav>
+<div><b>Suhel Khan</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
 
-<!-- YOUR PHOTO (place inside photo folder) -->
-<img src="photo/profile.png" class="profile-img" alt="Suhel Khan">
+<img src="photo/profile.jpg" class="profile-img" alt="Suhel Khan">
 
 <h1>Suhel Khan</h1>
 
-<p>
-Aspiring Software Engineer specializing in Java development, backend systems and DevOps practices including CI/CD pipelines using GitHub Actions.
-</p>
+<div class="typing" id="typing"></div>
 
 <div class="icons">
 
-<!-- GitHub Image with clickable link -->
 <a class="icon" href="https://github.com/Suhel33" target="_blank">
-<img src="photo/github-logo-icon.png" alt="GitHub">
+<img src="photo/github-logo-icon.png">
 </a>
 
-<!-- LinkedIn Image with clickable link -->
 <a class="icon" href="https://www.linkedin.com/in/suhel-khan-90627025a/" target="_blank">
-<img src="photo/linkedIn.png" alt="LinkedIn">
+<img src="photo/linkedIn.png">
 </a>
 
-<!-- Email Image with clickable link -->
 <a class="icon" href="mailto:suhelkhan4171@gmail.com">
-<img src="photo/email.png" alt="Email">
+<img src="photo/email.png">
 </a>
 
 </div>
 
-</section>
+<a class="resume-btn" href="resume.pdf" download>Download Resume</a>
 
+</section>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
 <h2>About Me</h2>
-
 <div class="glass">
-<p>
-Final year B.Tech Computer Science student at Teerthanker Mahaveer University. Skilled in Java, SQL, Linux, React and DevOps practices including CI/CD pipelines using GitHub Actions. Passionate about building scalable and secure software systems.
-</p>
+Final year B.Tech Computer Science student skilled in Java, SQL, Linux, React and DevOps automation using GitHub Actions. Interested in backend systems, scalable applications and modern cloud DevOps practices.
 </div>
-
 </section>
 
-
 <!-- SKILLS -->
-<section>
+<section id="skills">
 <h2>Technical Skills</h2>
 
 <div class="skills">
 
-<div class="skill">
-<i class="devicon-java-plain colored"></i>
-<p>Java</p>
-</div>
-
-<div class="skill">
-<i class="devicon-spring-plain colored"></i>
-<p>Spring Boot</p>
-</div>
-
-<div class="skill">
-<i class="devicon-react-original colored"></i>
-<p>React</p>
-</div>
-
-<div class="skill">
-<i class="devicon-python-plain colored"></i>
-<p>Python</p>
-</div>
-
-<div class="skill">
-<i class="devicon-mysql-plain colored"></i>
-<p>SQL</p>
-</div>
-
-<div class="skill">
-<i class="devicon-linux-plain colored"></i>
-<p>Linux</p>
-</div>
-
-<div class="skill">
-<i class="devicon-cplusplus-plain colored"></i>
-<p>C++ / DSA</p>
-</div>
-
-<div class="skill">
-<i class="devicon-git-plain colored"></i>
-<p>Git</p>
-</div>
-
-<div class="skill">
-<i class="devicon-github-original"></i>
-<p>GitHub</p>
-</div>
-
-<div class="skill">
-<i class="devicon-docker-plain colored"></i>
-<p>Docker</p>
-</div>
+<div class="skill"><i class="devicon-java-plain colored"></i><p>Java</p></div>
+<div class="skill"><i class="devicon-spring-plain colored"></i><p>Spring</p></div>
+<div class="skill"><i class="devicon-react-original colored"></i><p>React</p></div>
+<div class="skill"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+<div class="skill"><i class="devicon-mysql-plain colored"></i><p>SQL</p></div>
+<div class="skill"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
+<div class="skill"><i class="devicon-git-plain colored"></i><p>Git</p></div>
+<div class="skill"><i class="devicon-github-original"></i><p>GitHub</p></div>
+<div class="skill"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
 
 </div>
-
 </section>
 
-
 <!-- PROJECTS -->
-<section>
+<section id="projects">
 <h2>Projects</h2>
 
 <div class="grid">
 
 <div class="glass">
 <h3>ATM Machine Simulator</h3>
-<p>
-Java based ATM system implementing authentication, withdrawal, deposit, fund transfer and balance inquiry.
-</p>
+<p>Java based ATM system implementing authentication and banking transactions.</p>
+
+<div class="project-buttons">
+<a href="https://github.com/Suhel33" target="_blank">GitHub</a>
+</div>
+
 </div>
 
 <div class="glass">
 <h3>To Do List Manager</h3>
-<p>
-C++ based task management application supporting task creation, editing, deletion and completion tracking.
-</p>
+<p>C++ task management system with CRUD task operations.</p>
+
+<div class="project-buttons">
+<a href="https://github.com/Suhel33" target="_blank">GitHub</a>
 </div>
 
 </div>
 
+</div>
 </section>
-
-
-<!-- EXPERIENCE -->
-<section>
-<h2>Internship Experience</h2>
-
-<div class="grid">
-
-<div class="glass">
-<h3>Octanet Services Pvt Ltd</h3>
-<p>
-Worked on Core Java, SQL and Data Structures gaining strong backend programming knowledge.
-</p>
-</div>
-
-<div class="glass">
-<h3>SoftPro India – Noida</h3>
-<p>
-Worked with Java, Spring Boot and React while improving backend development and SQL database integration.
-</p>
-</div>
-
-</div>
-
-</section>
-
 
 <!-- CONTACT -->
-<section style="text-align:center">
-
-<h2>Let's Connect</h2>
-<p>Open to Software Engineering, Backend Development and DevOps opportunities.</p>
-
-<a class="contact-btn" href="mailto:suhelkhan4171@gmail.com">Contact Me</a>
-
+<section id="contact" style="text-align:center">
+<h2>Contact</h2>
+<p>Open for Software Engineering, Backend and DevOps opportunities.</p>
+<a class="resume-btn" href="mailto:suhelkhan4171@gmail.com">Send Email</a>
 </section>
-
 
 <footer>
 © 2026 Suhel Khan
 </footer>
+
+<script>
+
+const roles=[
+"Java Developer",
+"Backend Engineer",
+"DevOps Enthusiast",
+"CI/CD with GitHub Actions"
+]
+
+let i=0
+let j=0
+let current=""
+let isDeleting=false
+
+function type(){
+
+current=roles[i]
+
+if(isDeleting){
+j--
+}else{
+j++
+}
+
+document.getElementById("typing").textContent=current.substring(0,j)
+
+if(!isDeleting && j===current.length){
+isDeleting=true
+setTimeout(type,1200)
+return
+}
+
+if(isDeleting && j===0){
+isDeleting=false
+i=(i+1)%roles.length
+}
+
+setTimeout(type,isDeleting?40:80)
+
+}
+
+type()
+
+particlesJS("particles-js",{
+"particles":{
+"number":{"value":60},
+"size":{"value":3},
+"move":{"speed":1},
+"line_linked":{"enable":true}
+}
+})
+
+</script>
 
 </body>
 </html>
