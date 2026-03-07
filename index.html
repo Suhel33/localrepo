@@ -1,57 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suhel Khan | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#020617,#0f172a);
+color:white;
+overflow-x:hidden;
+}
+
+section{
+padding:80px 10%;
+}
+
+h1,h2,h3{
+font-weight:600;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#cbd5f5;
+max-width:600px;
+}
+
+.icons{
+margin-top:30px;
+display:flex;
+gap:20px;
+}
+
+.icon{
+padding:12px;
+border-radius:50%;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.2);
+transition:0.3s;
+}
+
+.icon:hover{
+transform:scale(1.15);
+background:rgba(255,255,255,0.15);
+}
+
+.glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.2);
+padding:30px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.glass:hover{
+transform:translateY(-8px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.skills div{
+text-align:center;
+padding:15px;
+border-radius:10px;
+background:rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.skills div:hover{
+transform:scale(1.1);
+background:rgba(255,255,255,0.15);
+}
+
+.contact-btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 28px;
+border-radius:10px;
+background:white;
+color:black;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#94a3b8;
+}
+
+</style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 20px;">
 
-    <!-- Header Section -->
-    <header>
-        <h1>John Doe</h1>
-        <p><strong>Web Developer | Designer | Freelancer</strong></p>
-        <hr>
-    </header>
+<body>
 
-    <!-- About Section -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            Hello! I am a passionate web developer with experience in creating 
-            clean and user-friendly websites. I love turning ideas into reality 
-            through code.
-        </p>
-    </section>
+<section class="hero">
+<h1>Suhel Khan</h1>
+<p>Aspiring Software Engineer specializing in Java development, backend systems and DevOps practices including CI/CD pipelines using GitHub Actions.</p>
 
-    <!-- Projects Section -->
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Portfolio Website</strong> – A personal portfolio to showcase my work.
-            </li>
-            <li>
-                <strong>Blog Platform</strong> – A simple blog system for sharing articles.
-            </li>
-            <li>
-                <strong>E-commerce Store</strong> – A basic online shop for small businesses.
-            </li>
-        </ul>
-    </section>
+<div class="icons">
+<a class="icon" href="https://github.com/Suhel33">GitHub</a>
+<a class="icon" href="https://www.linkedin.com/in/suhel-khan-90627025a/">LinkedIn</a>
+<a class="icon" href="mailto:suhelkhan4171@gmail.com">Email</a>
+</div>
+</section>
 
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:john@example.com">john@example.com</a></p>
-        <p>Phone: +91 98765 43210</p>
-    </section>
+<section>
+<h2>About Me</h2>
+<div class="glass">
+<p>
+Final year B.Tech Computer Science student at Teerthanker Mahaveer University. Skilled in Java, SQL, Linux, React and DevOps practices including CI/CD pipelines using GitHub Actions. Passionate about building secure and scalable software systems.
+</p>
+</div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 John Doe. All rights reserved.</p>
-    </footer>
+<section>
+<h2>Technical Skills</h2>
+<div class="grid skills">
+<div>Java</div>
+<div>Spring Boot</div>
+<div>React</div>
+<div>Python</div>
+<div>SQL</div>
+<div>Linux</div>
+<div>DSA</div>
+<div>OOP</div>
+<div>Git</div>
+<div>CI/CD</div>
+<div>GitHub Actions</div>
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="glass">
+<h3>ATM Machine Simulator</h3>
+<p>
+Java based ATM system implementing authentication, withdrawal, deposit, fund transfer and balance inquiry.
+</p>
+</div>
+
+<div class="glass">
+<h3>To Do List Manager</h3>
+<p>
+C++ based task management application supporting task creation, editing, deletion and completion tracking.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+<h2>Internship Experience</h2>
+
+<div class="grid">
+
+<div class="glass">
+<h3>Octanet Services Pvt Ltd</h3>
+<p>
+Worked on Core Java, SQL and Data Structures gaining strong backend programming knowledge.
+</p>
+</div>
+
+<div class="glass">
+<h3>SoftPro India – Noida</h3>
+<p>
+Worked with Java, Spring Boot and React while improving backend development and SQL database integration.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section style="text-align:center">
+<h2>Let's Connect</h2>
+<p>Open to Software Engineering, Backend Development and DevOps opportunities.</p>
+
+<a class="contact-btn" href="mailto:suhelkhan4171@gmail.com">Contact Me</a>
+
+</section>
+
+<footer>
+© 2026 Suhel Khan
+</footer>
 
 </body>
 </html>
