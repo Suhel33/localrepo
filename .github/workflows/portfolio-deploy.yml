@@ -18,7 +18,6 @@ jobs:
 
         environment:
             name: github-pages
-            url: ${{steps.deployment.outputs.page_url}}
         steps:
           # clones or checks out the code where this workflow is written
           # Get access to your Portfolio code via pre-built actions
@@ -41,5 +40,6 @@ jobs:
           # Deploy to Github pages
           # STEP - 4
           - name: Deploy to Github pages
+            id: deployment
             uses: actions/deploy-pages@v4
 
