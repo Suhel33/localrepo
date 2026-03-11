@@ -11,7 +11,7 @@ on:
 permissions:
   pages: write      # to deploy to Pages
   id-token: write   # to verify the deployment originates from an appropriate source
-  contents: read
+  contents: read    # to read repository files
 
 jobs:
     deploy:
@@ -45,4 +45,4 @@ jobs:
           - name: Deploy to Github pages
             id: deployment
             uses: actions/deploy-pages@v4
-
+            
