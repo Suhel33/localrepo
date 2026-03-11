@@ -39,6 +39,7 @@ jobs:
                 path: "."
         
           # Deploy to Github pages
+          # Make Page Live
           # STEP - 4
           - name: Deploy to Github pages
             id: deployment
